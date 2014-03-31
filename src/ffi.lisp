@@ -30,7 +30,7 @@
   (endpoint :string))
 
 (when #.(eql zmq-version-major 3)
-      (defcfun (%unbind "zmq_disconnect") :int
+      (defcfun (%disconnect "zmq_disconnect") :int
         (socket socket)
         (endpoint :string)))
 
